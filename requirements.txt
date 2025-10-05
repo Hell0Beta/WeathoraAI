@@ -1,8 +1,8 @@
 
 flask
 flask-cors
-tensorflow==2.19.0
-keras==2.19.0
+tensorflow
+keras
 numpy
 pandas
 requests
