@@ -536,7 +536,8 @@ def health():
         'model_loaded': model is not None,
         'scaler_loaded': scaler is not None,
         'config_loaded': config is not None,
-        'timestamp': datetime.now().isoformat()
+        'timestamp': datetime.now().isoformat(),
+        'koko':'kko'
     })
 
 @app.route('/model/info', methods=['GET'])
