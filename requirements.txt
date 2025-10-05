@@ -7,3 +7,4 @@ pandas
 requests
 xgboost
 gunicorn
+python-3.11.9
