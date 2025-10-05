@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "weathoraai"
+version = "0.1.0"
+description = "Weathora AI weather forecasting app"
+authors = ["Tedlee Appiah-Kubi"]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+flask = "^3.1.2"
+flask-cors = "^6.0.1"
+tensorflow = "2.15.0"
+keras = "2.15.0"
+numpy = "^1.26"
+pandas = "^2.2"
+requests = "^2.32"
+xgboost = "^2.1"
+gunicorn = "^23.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
