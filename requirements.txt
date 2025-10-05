@@ -1,4 +1,4 @@
-python-3.11.9
+
 flask
 flask-cors
 tensorflow==2.19.0
