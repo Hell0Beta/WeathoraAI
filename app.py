@@ -28,10 +28,16 @@ CORS(app)  # Enable CORS for all routes
 # ============================================================================
 # CONFIGURATION
 # ============================================================================
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "weather_lstm_model.h5")
+SCALER_PATH = os.path.join(BASE_DIR, "scaler.pkl")
+CONFIG_PATH = os.path.join(BASE_DIR, "model_config.json")
 
-MODEL_PATH = 'weather_lstm_model.h5'
-SCALER_PATH = 'scaler.pkl'
-CONFIG_PATH = 'model_config.json'
+
+model_path = os.path.join(BASE_DIR, "weather_lstm_model.h5")
+scaler_path = os.path.join(BASE_DIR, "scaler.pkl")
+config_path = os.path.join(BASE_DIR, "model_config.json")
 
 # ============================================================================
 # LOAD MODEL AND CONFIGURATION
@@ -55,12 +61,12 @@ except Exception as e:
 
 # Load NVAPS model
 try:
-    nvaps_model = keras.models.load_model('nvaps_lstm_model.h5')
-    with open('nvaps_scaler.pkl', 'rb') as f:
+    nvaps_model = keras.models.load_model(os.path.join(BASE_DIR, "nvaps_lstm_model.h5"))
+    with open(os.path.join(BASE_DIR, "nvaps_scaler.pkl"), 'rb') as f:
         nvaps_scaler = pickle.load(f)
-    with open('nvaps_config.json', 'r') as f:
+    with open(os.path.join(BASE_DIR, "nvaps_config.json"), 'r') as f:
         nvaps_config = json.load(f)
-    with open('nvaps_label_encoder.pkl', 'rb') as f:
+    with open(os.path.join(BASE_DIR, "nvaps_label_encoder.pkl"), 'rb') as f:
         nvaps_label_encoder = pickle.load(f)
     print(f"✓ NVAPS model loaded")
 except Exception as e:
