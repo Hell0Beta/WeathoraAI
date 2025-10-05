@@ -382,7 +382,9 @@ def home():
             '/predict/multi': 'Multi-step TPW predictions (POST)',
             '/model/info': 'Model information (GET)',
             '/weather/predict': 'Weather forecast from TPW (POST) - NEW',
-            '/weather/current': 'Current weather + forecast (GET/POST) - NEW'
+            '/weather/current': 'Current weather + forecast (GET/POST) - NEW',
+            '/hihi/': 'jojo'
+
         },
         'weather_parameters': [
             'temperature_c', 'feelslike_c', 'humidity', 'cloudcover',
